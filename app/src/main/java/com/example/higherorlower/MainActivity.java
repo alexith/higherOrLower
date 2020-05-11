@@ -18,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
         double randomNumber = (random()*(20-1)+1)+1;
 
-        if (finalGuessedNumber > randomNumber){
+        int roundRandomNumber = (int) Math.round(randomNumber);
+
+        if (finalGuessedNumber > roundRandomNumber){
             Toast.makeText(MainActivity.this, "You guessed greater number", Toast.LENGTH_SHORT).show();
         } else if (finalGuessedNumber < randomNumber){
             Toast.makeText(MainActivity.this, "You guessed lesser number", Toast.LENGTH_SHORT).show();
