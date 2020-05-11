@@ -12,11 +12,13 @@ public class MainActivity extends AppCompatActivity {
 
     EditText guessedNumber = (EditText) findViewById(R.id.guessedNumber);
 
+    Double finalGuessedNumber = Double.parseDouble(guessedNumber.getText().toString());
+
         int randomNumber = (int) (Math.random()+1)*2;
 
-
-
-
+        if (finalGuessedNumber > randomNumber){
+            System.out.println()
+        }
     }
 
     @Override
