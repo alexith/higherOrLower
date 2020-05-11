@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,11 @@ public class MainActivity extends AppCompatActivity {
         int randomNumber = (int) (Math.random()+1)*2;
 
         if (finalGuessedNumber > randomNumber){
-            System.out.println()
+            Toast.makeText(MainActivity.this, "You guessed greater number", Toast.LENGTH_SHORT).show();
+        } else if (finalGuessedNumber < randomNumber){
+            Toast.makeText(MainActivity.this, "You guessed lesser number", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(MainActivity.this, "You guessed it right! :)", Toast.LENGTH_SHORT).show();
         }
     }
 
