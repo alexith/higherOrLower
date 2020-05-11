@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.Random;
+
 import static java.lang.Math.random;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,11 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
     Double finalGuessedNumber = Double.parseDouble(guessedNumber.getText().toString());
 
-        double randomNumber = (random()*(20-1)+1)+1;
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(20) + 1;
 
-        int roundRandomNumber = (int) Math.round(randomNumber);
-
-        if (finalGuessedNumber > roundRandomNumber){
+        if (finalGuessedNumber > randomNumber){
             Toast.makeText(MainActivity.this, "You guessed greater number", Toast.LENGTH_SHORT).show();
         } else if (finalGuessedNumber < randomNumber){
             Toast.makeText(MainActivity.this, "You guessed lesser number", Toast.LENGTH_SHORT).show();
