@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     Double finalGuessedNumber = Double.parseDouble(guessedNumber.getText().toString());
 
-        int randomNumber = (int) (Math.random()+1)*2;
+        int randomNumber = (int) (Math.random()+1)*3;
 
         if (finalGuessedNumber > randomNumber){
             Toast.makeText(MainActivity.this, "You guessed greater number", Toast.LENGTH_SHORT).show();
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "You guessed it right! :)", Toast.LENGTH_SHORT).show();
         }
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
