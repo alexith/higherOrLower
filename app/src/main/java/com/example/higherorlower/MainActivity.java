@@ -23,11 +23,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (finalGuessedNumber > randomNumber){
-            Toast.makeText(MainActivity.this, "You guessed greater number", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Greater", Toast.LENGTH_SHORT).show();
         } else if (finalGuessedNumber < randomNumber){
-            Toast.makeText(MainActivity.this, "You guessed lesser number", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Lesser", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(MainActivity.this, "You guessed it right! :)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "You'r right! :), continue?", Toast.LENGTH_SHORT).show();
+
+            Random rand = new Random();
+            randomNumber = rand.nextInt(20) + 1;
+
         }
     }
 
