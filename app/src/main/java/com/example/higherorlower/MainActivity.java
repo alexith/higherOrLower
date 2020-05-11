@@ -7,7 +7,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    public class guessInProgress(View view){
+    public void guessInProgress(View view){
 
     }
 
