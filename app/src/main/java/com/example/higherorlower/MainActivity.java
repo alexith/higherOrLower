@@ -6,18 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import static java.lang.Math.random;
 
 public class MainActivity extends AppCompatActivity {
 
     public void guessInProgress(View view){
 
-    EditText guessedNumber = (EditText) findViewById(R.id.guessedNumber);
+    EditText guessedNumber = findViewById(R.id.guessedNumber);
 
     Double finalGuessedNumber = Double.parseDouble(guessedNumber.getText().toString());
 
-        int[] givenListOfNumbers = {1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,16 ,17 ,18 ,19 ,20};
-
-        int randomNumber = (int) (Math.random();
+        double randomNumber = (random()*(20-1)+1)+1;
 
         if (finalGuessedNumber > randomNumber){
             Toast.makeText(MainActivity.this, "You guessed greater number", Toast.LENGTH_SHORT).show();
