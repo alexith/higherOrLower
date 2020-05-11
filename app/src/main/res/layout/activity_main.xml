@@ -31,10 +31,11 @@
         app:layout_constraintVertical_bias="0.251" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/guessedNumber"
+        android:layout_width="292dp"
+        android:layout_height="58dp"
         android:ems="10"
+        android:hint="Enter your guessed number here.."
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
