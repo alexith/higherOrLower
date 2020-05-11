@@ -15,7 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     Double finalGuessedNumber = Double.parseDouble(guessedNumber.getText().toString());
 
-        int randomNumber = (int) (Math.random()+1)*3;
+        int[] givenListOfNumbers = {1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,16 ,17 ,18 ,19 ,20};
+
+        int randomNumber = (int) (Math.random();
 
         if (finalGuessedNumber > randomNumber){
             Toast.makeText(MainActivity.this, "You guessed greater number", Toast.LENGTH_SHORT).show();
